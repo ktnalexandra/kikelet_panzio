@@ -1,0 +1,40 @@
+﻿<Window x:Class="kikelet_panzio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kikelet_panzio"
+        mc:Ignorable="d"
+        Title="Kikelet Panzió foglalási szoftver" Height="450" Width="800">
+    <Grid>
+        <TabControl Margin="5, 5, 5, 5">
+            <TabItem Header="Szobák">
+                <StackPanel>
+                    <ListBox x:Name="lbx_Szobak"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Ügyfelek">
+                <StackPanel>
+                    <ListBox x:Name="lbx_Ugyfelek"/>
+                    <Button Content="Új ügyfél felvétele" Name="btn_UgyfelFelvetele" Click="btn_UgyfelFelvetele_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Foglalások">
+                <StackPanel>
+                    <ListBox x:Name="lbx_Foglalasok"/>
+                    <Button Content="Új foglalás felvéte" Name="btn_FoglalasFelvete" Click="btn_FoglalasFelvete_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Statisztikák">
+                <StackPanel>
+                    <Label Content="Összes bevétel: "/>
+                    <TextBlock x:Name="txb_OsszBevetel" Margin="10"/>
+                    <Label Content="Legtöbbet kivett szoba: "/>
+                    <TextBlock x:Name="txb_LegtobbetKivett" Margin="10"/>
+                    <Label Content="Visszajáró ügyfelek: "/>
+                    <TextBlock x:Name="txbVisszajaroUgyfelek" Margin="10"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
